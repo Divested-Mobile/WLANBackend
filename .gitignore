@@ -1,0 +1,12 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+unifiednlp-api-release.aar
+android_external_UnifiedNlpApi
+unifiednlp-api-release
+.idea
+WLANBackend.iml

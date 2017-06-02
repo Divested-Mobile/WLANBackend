@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MergedWiFiNLP</string>
+    <string name="app_friendly_name">Merged Wi-Fi Location Service</string>
+    <string name="app_summary">Offline database from various sources</string>
+</resources>

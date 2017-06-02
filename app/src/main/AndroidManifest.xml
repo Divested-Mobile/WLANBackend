@@ -1,0 +1,23 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="info.spotcomms.wlanbackend">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher" android:theme="@style/AppTheme">
+        <service
+            android:name=".BackendService"
+            android:exported="true"
+            android:permission="android.permission.ACCESS_COARSE_LOCATION"
+            android:label="@string/app_friendly_name">
+            <intent-filter>
+                <action android:name="org.microg.nlp.LOCATION_BACKEND" />
+            </intent-filter>
+            <meta-data android:name="org.microg.nlp.BACKEND_SUMMARY" android:value="@string/app_summary" />
+        </service>
+    </application>
+
+</manifest>
