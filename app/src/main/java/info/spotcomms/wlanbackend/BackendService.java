@@ -58,7 +58,7 @@ public class BackendService extends HelperLocationBackendService implements WiFi
 
     @Override
     public void onWiFisChanged(Set<WiFiBackendHelper.WiFi> networks) {
-        if(shouldUpdateLocation()) {
+        if (shouldUpdateLocation()) {
             if (networks.size() > 0) {
                 Log.d(logingTag, "Networks available");
                 int ct = 0;
@@ -66,7 +66,7 @@ public class BackendService extends HelperLocationBackendService implements WiFi
                 double lon = 0;
                 for (WiFiBackendHelper.WiFi curWifi : networks) {
                     String bssid = curWifi.getBssid().replaceAll(":", "").toUpperCase();
-                    if(mergedDB.containsKey(bssid)) {
+                    if (mergedDB.containsKey(bssid)) {
                         String result = mergedDB.get(bssid);
                         if (result != null) {
                             String[] curWifiN = result.split(":");
@@ -96,7 +96,7 @@ public class BackendService extends HelperLocationBackendService implements WiFi
     }
 
     private boolean shouldUpdateLocation() {
-        if(curLocation == null || System.currentTimeMillis() - curLocation.getTime() >= getTimeout()) {
+        if (curLocation == null || System.currentTimeMillis() - curLocation.getTime() >= getTimeout()) {
             Log.d(logingTag, "Location update needed");
             return true;
         }
@@ -105,8 +105,8 @@ public class BackendService extends HelperLocationBackendService implements WiFi
     }
 
     private int getTimeout() {
-        if(lastLocation != null && lastLocation.getLatitude() == curLocation.getLatitude() && lastLocation.getLongitude() == curLocation.getLongitude()) {
-            if(curTimeout * timeoutFactor <= maxTimeout) {
+        if (lastLocation != null && lastLocation.getLatitude() == curLocation.getLatitude() && lastLocation.getLongitude() == curLocation.getLongitude()) {
+            if (curTimeout * timeoutFactor <= maxTimeout) {
                 curTimeout *= timeoutFactor;
             } else {
                 curTimeout = maxTimeout;
