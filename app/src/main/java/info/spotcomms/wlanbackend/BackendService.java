@@ -15,28 +15,18 @@ import org.microg.nlp.api.WiFiBackendHelper;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Scanner;
 import java.util.Set;
 
 public class BackendService extends HelperLocationBackendService implements WiFiBackendHelper.Listener {
 
-    private static String logingTag = "MergedWiFiNLP";
+    private static final String logingTag = "MergedWiFiNLP";
     private static BackendService instance;
-    private static HashMap<String, String> mergedDB = new HashMap<String, String>();
+    private static HashMap<String, String> mergedDB = new HashMap<>();
     private static Location lastLocation;
     private static Location curLocation;
-    private int minTimeout = 2000;
-    private int maxTimeout = 15000;
+    private final int minTimeout = 2000;
     private int curTimeout = minTimeout;
-    private int timeoutFactor = 2;
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-    }
 
     @Override
     protected synchronized void onOpen() {
@@ -106,6 +96,8 @@ public class BackendService extends HelperLocationBackendService implements WiFi
 
     private int getTimeout() {
         if (lastLocation != null && lastLocation.getLatitude() == curLocation.getLatitude() && lastLocation.getLongitude() == curLocation.getLongitude()) {
+            int timeoutFactor = 2;
+            int maxTimeout = 15000;
             if (curTimeout * timeoutFactor <= maxTimeout) {
                 curTimeout *= timeoutFactor;
             } else {
@@ -123,7 +115,7 @@ public class BackendService extends HelperLocationBackendService implements WiFi
         try {
             BufferedReader wifidb = new BufferedReader(new FileReader(new File(Environment.getExternalStorageDirectory(), "MergedWiFiBackend/WPSDB.csv")));
             String line;
-            mergedDB = new HashMap<String, String>();
+            mergedDB = new HashMap<>();
             while ((line = wifidb.readLine()) != null) {
                 String[] wifi = line.split(":");
                 mergedDB.put(wifi[0], wifi[1] + ":" + wifi[2]);
