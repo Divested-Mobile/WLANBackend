@@ -100,12 +100,13 @@
     <orderEntry type="library" exported="" name="com.android.support:support-v4-26.0.0-alpha1" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:animated-vector-drawable-26.0.0-alpha1" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:support-annotations:26.0.0-alpha1@jar" level="project" />
-    <orderEntry type="library" exported="" name="WLANBackend:unifiednlp-api-release-85e7869" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:support-compat-26.0.0-alpha1" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:support-core-utils-26.0.0-alpha1" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:appcompat-v7-26.0.0-alpha1" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:support-fragment-26.0.0-alpha1" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:support-media-compat-26.0.0-alpha1" level="project" />
+    <orderEntry type="library" exported="" name="net.sf.trove4j:trove4j:3.0.3@jar" level="project" />
+    <orderEntry type="library" exported="" name="org.microg:unifiednlp-api-1.5.3" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:support-core-ui-26.0.0-alpha1" level="project" />
   </component>
 </module>

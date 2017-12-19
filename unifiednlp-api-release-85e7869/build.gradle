@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('unifiednlp-api-release-85e7869.aar'))

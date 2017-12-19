@@ -15,21 +15,22 @@ import org.microg.nlp.api.WiFiBackendHelper;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.util.HashMap;
 import java.util.Set;
+
+import gnu.trove.map.hash.THashMap;
 
 public class BackendService extends HelperLocationBackendService implements WiFiBackendHelper.Listener {
 
     private static final String logingTag = "MergedWiFiNLP";
     private static BackendService instance;
-    private static HashMap<String, String> mergedDB = new HashMap<>();
+    private static final THashMap<String, String> mergedDB = new THashMap<>();
     private static Location lastLocation;
     private static Location curLocation;
-    private final int minTimeout = 2000;
+    private static final int minTimeout = 2000;
     private int curTimeout = minTimeout;
 
     @Override
-    protected synchronized void onOpen() {
+    protected final synchronized void onOpen() {
         super.onOpen();
         addHelper(new WiFiBackendHelper(this, this));
         instance = this;
@@ -38,7 +39,7 @@ public class BackendService extends HelperLocationBackendService implements WiFi
     }
 
     @Override
-    protected synchronized void onClose() {
+    protected final synchronized void onClose() {
         Log.d(logingTag, "Exiting");
         super.onClose();
         if (instance == this) {
@@ -47,7 +48,7 @@ public class BackendService extends HelperLocationBackendService implements WiFi
     }
 
     @Override
-    public void onWiFisChanged(Set<WiFiBackendHelper.WiFi> networks) {
+    public final void onWiFisChanged(Set<WiFiBackendHelper.WiFi> networks) {
         if (shouldUpdateLocation()) {
             if (networks.size() > 0) {
                 Log.d(logingTag, "Networks available");
@@ -66,7 +67,7 @@ public class BackendService extends HelperLocationBackendService implements WiFi
                         }
                     }
                 }
-                if (lat != 0 && lon != 0) {//plz don't be at the center of the world
+                if (lat != 0 && lon != 0) { //plz don't be at the center of the world
                     lat = lat / ct;
                     lon = lon / ct;
                     lastLocation = curLocation;
@@ -115,12 +116,13 @@ public class BackendService extends HelperLocationBackendService implements WiFi
         try {
             BufferedReader wifidb = new BufferedReader(new FileReader(new File(Environment.getExternalStorageDirectory(), "MergedWiFiBackend/WPSDB.csv")));
             String line;
-            mergedDB = new HashMap<>();
+            mergedDB.clear();
             while ((line = wifidb.readLine()) != null) {
                 String[] wifi = line.split(":");
                 mergedDB.put(wifi[0], wifi[1] + ":" + wifi[2]);
             }
             wifidb.close();
+            System.gc();
             Log.d(logingTag, "Loaded " + mergedDB.size() + " WiFi networks");
         } catch (Exception e) {
             Log.d(logingTag, "Failed to fill database", e);
