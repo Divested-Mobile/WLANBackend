@@ -8,22 +8,22 @@ android {
         applicationId "info.spotcomms.wlanbackend"
         minSdkVersion 9
         targetSdkVersion 26
-        versionCode 7
+        versionCode 8
         versionName "1.3"
+        resConfigs "en"
     }
     buildTypes {
         debug {
             applicationIdSuffix ".debug"
             minifyEnabled true
-            useProguard false
             zipAlignEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            useProguard false
         }
         release {
             shrinkResources true
             minifyEnabled true
-            useProguard true
             zipAlignEnabled true
+            useProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
