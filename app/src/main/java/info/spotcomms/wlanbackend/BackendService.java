@@ -83,7 +83,7 @@ public class BackendService extends HelperLocationBackendService implements WiFi
                     lat = lat / ct;
                     lon = lon / ct;
                     lastLocation = curLocation;
-                    curLocation = LocationHelper.create("MergedWiFiBackend", lat, lon, 50);
+                    curLocation = LocationHelper.create("MergedWiFiBackend", lat, lon, 150);
                     curLocation.setTime(System.currentTimeMillis());
                     report(curLocation);
                     Log.d(logingTag, "Networks Found: " + networks.size() + ", Networks Known: " + ct + ", Current Location: " + lat + " " + lon);
