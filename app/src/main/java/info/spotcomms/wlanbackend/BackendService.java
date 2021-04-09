@@ -126,7 +126,7 @@ public class BackendService extends HelperLocationBackendService implements WiFi
     private void fillDatabase() {
         Log.d(logingTag, "Attempting to fill daabase");
         try {
-            BufferedReader wifidb = new BufferedReader(new FileReader(new File(Environment.getExternalStorageDirectory(), "MergedWiFiBackend/WPSDB.csv")));
+            BufferedReader wifidb = new BufferedReader(new FileReader(new File(getApplicationContext().getFilesDir(), "WPSDB.csv")));
             String line;
             mergedDB.clear();
             while ((line = wifidb.readLine()) != null) {
