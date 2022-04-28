@@ -7,7 +7,7 @@ android {
         applicationId "info.spotcomms.wlanbackend"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 23
+        versionCode 24
         versionName "2.0"
         resConfigs "en"
     }
