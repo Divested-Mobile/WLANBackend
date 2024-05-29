@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_friendly_name">Servicio de ubicación Wi-Fi combinado</string>
+    <string name="app_summary">Base de datos sin conexión desde varias fuentes</string>
+    <string name="select_db">Por favor, seleccione una base de datos CSV para usar...</string>
+    <string name="selected_db">¡Base de datos importada!</string>
+    <string name="app_name">MergedWiFiNLP</string>
+</resources>
