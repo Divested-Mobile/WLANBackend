@@ -4,4 +4,5 @@
     <string name="select_db">Selecione um banco de dados em formato CSV para usar...</string>
     <string name="selected_db">Banco de dados importado!</string>
     <string name="app_friendly_name">Serviço de Localização por Wi-Fi Mesclado</string>
+    <string name="app_name">MergedWiFiNLP</string>
 </resources>
