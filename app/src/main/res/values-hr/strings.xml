@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_friendly_name">Spojena usluga Wi-Fi lokacije</string>
+    <string name="app_summary">Offline baza podataka iz raznih izvora</string>
+    <string name="select_db">Molimo Vas odaberite CSV bazu podataka za korištenje...</string>
+    <string name="selected_db">Uvezena baza podataka!</string>
+    <string name="app_name">MergedWiFiNLP</string>
+</resources>
