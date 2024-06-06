@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MergedWiFiNLP</string>
+    <string name="app_friendly_name">融合Wi-Fi定位服务</string>
+    <string name="app_summary">来自各种来源的离线数据库</string>
+    <string name="select_db">请选择一个CSV数据库文件来使用...</string>
+    <string name="selected_db">已导入数据库！</string>
 </resources>
