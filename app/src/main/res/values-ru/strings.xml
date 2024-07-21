@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">MergedWiFiNLP</string>
+    <string name="app_friendly_name">Объединенный сервис местоположения Wi-Fi</string>
+    <string name="app_summary">Локальная база данных из разных источников</string>
+    <string name="select_db">Пожалуйста, выберите базу данных CSV для использования...</string>
+    <string name="selected_db">База данных импортирована!</string>
+</resources>
