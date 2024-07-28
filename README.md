@@ -20,7 +20,7 @@ Translations
 - Chinese (Simplified): Crit, 大王叫我来巡山
 - Croatian: lukapiplica
 - German: thereisnoanderson
-- Portuguese (Brazil)): lucasmz-dev
+- Portuguese (Brazil): lucasmz-dev
 - Russian: Andrey
 - Spanish: gallegonovato
 - Ukrainian: Fqwe1
