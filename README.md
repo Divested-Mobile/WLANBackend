@@ -15,6 +15,16 @@ Credits
 - UnifiedNlp, License: Apache 2.0, https://github.com/microg/UnifiedNlp
 - Icons: Google/Android/AOSP, License: Apache 2.0, https://google.github.io/material-design-icons/
 
+Translations
+------------
+- Chinese (Simplified): Crit, 大王叫我来巡山
+- Croatian: lukapiplica
+- German: thereisnoanderson
+- Portuguese (Brazil)): lucasmz-dev
+- Russian: Andrey
+- Spanish: gallegonovato
+- Ukrainian: Fqwe1
+
 Donate
 -------
 - https://divested.dev/donate
