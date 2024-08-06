@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">MergedWiFiNLP</string>
+    <string name="app_friendly_name">Ühendatud WiFi asukohateenus</string>
+    <string name="app_summary">Võrguvaba andmekogu erinevatest allikatest</string>
+    <string name="select_db">Palun vali csv-andmebaas, mida soovid kasutada...</string>
+    <string name="selected_db">Andmebaas on imporditud!</string>
+</resources>
