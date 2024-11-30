@@ -17,9 +17,13 @@ Credits
 
 Translations
 ------------
+- Arabic: jonnysemon
 - Chinese (Simplified): Crit, 大王叫我来巡山
 - Croatian: lukapiplica
+- Czech: Fjuro
+- Estonian: Priit Jõerüüt
 - German: thereisnoanderson
+- Italian: Dark Space
 - Portuguese (Brazil): lucasmz-dev
 - Russian: Andrey
 - Spanish: gallegonovato
