@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_summary">பல்வேறு மூலங்களிலிருந்து இணைப்பில்லாத தரவுத்தளம்</string>
+    <string name="app_name">இணைக்கப்பட்ட டவிஃபின்எல்பி</string>
+    <string name="app_friendly_name">இணைக்கப்பட்ட வைஃபை இருப்பிட பணி</string>
+    <string name="selected_db">இறக்குமதி செய்யப்பட்ட தரவுத்தளம்!</string>
+    <string name="select_db">பயன்படுத்த காபிம தரவுத்தளத்தைத் தேர்ந்தெடுக்கவும் ...</string>
+</resources>
